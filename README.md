@@ -4,15 +4,15 @@ This repo is a starter project implementing some great tools. Inspired from DFS 
 
 ## Process
 
-npm i sass --save
-npm i normalize.css
+- npm i sass --save
+- npm i normalize.css
 
 ### Libs :
 
 #### JS 
-npm i focus-trap
-npm i tiny-slider
-npm i jquery
+- npm i focus-trap
+- npm i tiny-slider
+- npm i jquery
 
 ### Process related doc :
 https://create-react-app.dev/docs/adding-a-sass-stylesheet/
