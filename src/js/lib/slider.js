@@ -1,6 +1,6 @@
-import $ from "jquery"
-// import { tns } from "tiny-slider"
-import { tns } from "../../../node_modules/tiny-slider/src/tiny-slider.js"
+// import $ from "jquery"
+import { tns } from "tiny-slider"
+// import { tns } from "../../../node_modules/tiny-slider/src/tiny-slider.js"
 
 // SLIDER
 

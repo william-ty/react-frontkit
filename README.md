@@ -2,11 +2,25 @@
 This repo is a project starter implementing some great tools. Inspired from DFS by Chmood 
 
 
-## Process :
+## Process
 
 npm i sass --save
 npm i normalize.css
 
+### Libs :
+
+#### JS 
+npm i focus-trap
+npm i tiny-slider
+npm i jquery
+
+### Process related doc :
+https://create-react-app.dev/docs/adding-a-sass-stylesheet/
+
+## TODOS : 
+- favicons
+- js tools
+- xlinHref SVG
 
 ------------------------------------------
 # Getting Started with Create React App
