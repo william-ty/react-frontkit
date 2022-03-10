@@ -1,4 +1,5 @@
-import './App.css';
+import './scss/main.scss';
+import './js/main.js';
 
 function App() {
   return (
@@ -184,7 +185,18 @@ function App() {
 
             </div>
           </section>
-
+          <section className="section section--todo">
+            <div className="container">
+              <h2>Todos</h2>
+              <div style={{backgroundColor: "#dc3545", borderRadius: "1rem", padding: "1rem"}}>
+                <ul style={{margin: "0"}}>
+                  <li>favicons</li>
+                  <li>JS Tools</li>
+                  <li>xlinkHref SVGs</li>
+                </ul>
+              </div>
+            </div>
+          </section>
           {/* COLORS */}
 
           <section className="section section--styleguide" id="colors">
@@ -1261,12 +1273,12 @@ function App() {
                 <div className="col-xs-6 col-sm-4 col-md-3">
                   <h3 className="styleguide-h3">Hollow</h3>
                   <button className="btn btn-hollow">.btn-hollow</button>
-                  <div style={{background: "black", padding: "0.75rem", marginBottom: "1.5rem"}}>
+                  <div style={{ background: "black", padding: "0.75rem", marginBottom: "1.5rem" }}>
                     <button className="btn btn-default btn-hollow">.btn-hollow</button>
                   </div>
                   <button className="btn btn-black btn-hollow">.btn-hollow</button>
                   <button className="btn btn-gray btn-hollow">.btn-hollow</button>
-                  <div style={{background: "black", padding: "0.75rem", marginBottom: "1.5rem"}}>
+                  <div style={{ background: "black", padding: "0.75rem", marginBottom: "1.5rem" }}>
                     <button className="btn btn-white btn-hollow">.btn-hollow</button>
                   </div>
                   <button className="btn btn-primary btn-hollow">.btn-hollow</button>
@@ -1276,7 +1288,7 @@ function App() {
                 <div className="col-xs-6 col-sm-4 col-md-3">
                   <h3 className="styleguide-h3">Rounded hollow</h3>
                   <button className="btn btn-round btn-hollow">.btn-hollow</button>
-                  <div style={{background: "black", padding: "0.75rem", marginBottom: "1.5rem"}}>
+                  <div style={{ background: "black", padding: "0.75rem", marginBottom: "1.5rem" }}>
                     <button className="btn btn-default btn-round btn-hollow">
                       .btn-hollow
                     </button>
@@ -1285,7 +1297,7 @@ function App() {
                     .btn-hollow
                   </button>
                   <button className="btn btn-gray btn-round btn-hollow">.btn-hollow</button>
-                  <div style={{background: "black", padding: "0.75rem", marginBottom: "1.5rem"}}>
+                  <div style={{ background: "black", padding: "0.75rem", marginBottom: "1.5rem" }}>
                     <button className="btn btn-white btn-round btn-hollow">
                       .btn-hollow
                     </button>
@@ -1652,13 +1664,13 @@ function App() {
 
               <h3 className="styleguide-h3">Square ratio</h3>
               <div className="max-width-xxs">
-                <div className="fixed-ratio fixed-ratio--1by1" style={{backgroundColor: "tomato"}}>
+                <div className="fixed-ratio fixed-ratio--1by1" style={{ backgroundColor: "tomato" }}>
                 </div>
               </div>
 
               <h3 className="styleguide-h3">16/9 ratio, responsive media embed</h3>
               <div className="max-width-xs">
-                <div className="fixed-ratio fixed-ratio--16by9" style={{backgroundColor: "lightseagreen"}}>
+                <div className="fixed-ratio fixed-ratio--16by9" style={{ backgroundColor: "lightseagreen" }}>
                   {/* <iframe src="https://www.youtube.com/embed/jbi9HEz-cww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                 </div>
               </div>
@@ -1755,10 +1767,10 @@ function App() {
 
               <h2>Image test</h2>
               <div className="styleguide-image-test">
-                <img src="dist/img/static/logo-diatem.jpg" alt="An image" />
+                <img src="dist/img/static/logo-diatem.jpg" alt="Logo Diatem Test" />
               </div>
               <div className="styleguide-image-test">
-                <img src="dist/img/static/logo-diatem-flipped.png" alt="An image" />
+                <img src="dist/img/static/logo-diatem-flipped.png" alt="Diatem Flipped" />
               </div>
 
               <h2>Background image test</h2>
@@ -1797,7 +1809,7 @@ function App() {
             <div className="container">
               <div className="footer-made-by">
                 <em>Made with ♥ by&nbsp;</em>
-                <a href="https://diatem.net" target="_blank" className="footer-made-by__link">
+                <a href="https://diatem.net" rel="noreferrer" target="_blank" className="footer-made-by__link" >
                   <svg viewBox="0 0 200 56" width="75" height="21">
                     <use xlinkHref="#logo-diatem--no-baseline--no-color"></use>
                   </svg>

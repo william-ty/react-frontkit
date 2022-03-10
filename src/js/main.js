@@ -19,7 +19,7 @@ import scroller from "./lib/scroller"
 import keyboard from "./lib/keyboard"
 // import select2 from "./lib/select2"
 
-import slider from "./lib/slider"
+// import slider from "./lib/slider"
 
 // [TODO] Port Skeleton and Lightwords libs here
 
