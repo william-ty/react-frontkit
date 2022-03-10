@@ -4,10 +4,8 @@ This repo is a project starter implementing some great tools. Inspired from DFS 
 
 ## Process :
 
-
-
-
-
+npm i sass --save
+npm i normalize.css
 
 
 ------------------------------------------
