@@ -1,5 +1,5 @@
 import './scss/main.scss';
-import './js/main.js';
+import './svgs';
 
 function App() {
   return (
@@ -31,9 +31,7 @@ function App() {
 
                 <div className="navbar-header">
                   <a className="navbar-logo" href="/" rel="home">
-                    <svg className="logo logo--mobile" viewBox="0 0 48 48">
-                      <use xlinkHref="#logo-mobile"></use>
-                    </svg>
+                    <SvgLogoDesktop/>
                     <svg className="logo logo--tablet" viewBox="0 0 150 48">
                       <use xlinkHref="#logo-tablet"></use>
                     </svg>
