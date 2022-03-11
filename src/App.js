@@ -1,5 +1,5 @@
 import './scss/main.scss';
-import './js/main.js';
+import * as Svgs from './img/sprites/index';
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
 
           {/* 
           <section className="section section--pre-header">
-            <div className="container">
-              <div>This is the pre-header section</div>
-            </div>
+          <div className="container">
+          <div>This is the pre-header section</div>
+          </div>
           </section> */}
 
           {/* HEADER */}
@@ -31,15 +31,9 @@ function App() {
 
                 <div className="navbar-header">
                   <a className="navbar-logo" href="/" rel="home">
-                    <svg className="logo logo--mobile" viewBox="0 0 48 48">
-                      <use xlinkHref="#logo-mobile"></use>
-                    </svg>
-                    <svg className="logo logo--tablet" viewBox="0 0 150 48">
-                      <use xlinkHref="#logo-tablet"></use>
-                    </svg>
-                    <svg className="logo logo--desktop" viewBox="0 0 200 76">
-                      <use xlinkHref="#logo-desktop"></use>
-                    </svg>
+                    <Svgs.LogoMobile className="logo logo--mobile" />
+                    <Svgs.LogoTablet className="logo logo--tablet" />
+                    <Svgs.LogoDesktop className="logo logo--desktop" />
                   </a>
                 </div>
 
@@ -57,9 +51,7 @@ function App() {
                           <span className="sr-only">Close menu</span>
                           <span>MENU</span>
                           &nbsp;
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-close"></use>
-                          </svg>
+                          <Svgs.IconClose />
                         </button>
                       </li>
 
@@ -94,26 +86,26 @@ function App() {
                       </li>
 
                       {/* <li className="menu-item menu-item--dropdown">
-                        <a href="window.location.href" className="menu-item-link">
-                          <span>Item</span>
-                        </a>
-                        <span className="menu-item-link dropdown-toggle" data-dropdown>
-                          <span className="caret"></span>
-                        </span>
-                        <div className="dropdown-wrapper">
-                          <ul className="dropdown-menu">
-                            <li className="menu-item">
-                              <a href="window.location.href" className="menu-item-link">
-                                <span>Sub-item</span>
-                              </a>
-                            </li>
-                            <li className="menu-item">
-                              <a href="window.location.href" className="menu-item-link">
-                                <span>Sub-item</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
+                      <a href="window.location.href" className="menu-item-link">
+                      <span>Item</span>
+                      </a>
+                      <span className="menu-item-link dropdown-toggle" data-dropdown>
+                      <span className="caret"></span>
+                      </span>
+                      <div className="dropdown-wrapper">
+                      <ul className="dropdown-menu">
+                      <li className="menu-item">
+                      <a href="window.location.href" className="menu-item-link">
+                      <span>Sub-item</span>
+                      </a>
+                      </li>
+                      <li className="menu-item">
+                      <a href="window.location.href" className="menu-item-link">
+                      <span>Sub-item</span>
+                      </a>
+                      </li>
+                      </ul>
+                      </div>
                       </li> */}
 
                     </ul>
@@ -129,9 +121,7 @@ function App() {
                       <li className="menu-item">
                         <button className="menu-item-link btn btn-white btn-round btn-bg-grow">
                           <span className="sr-only">My cart</span>
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-cart"></use>
-                          </svg>
+                          <Svgs.IconCart className="icon" />
                           {/* <span className="icon-label">13</span> */}
                         </button>
                       </li>
@@ -143,16 +133,13 @@ function App() {
                         >
                           <span>MENU</span>
                           &nbsp;
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-menu"></use>
-                          </svg>
+                          <Svgs.IconMenu className="icon" />
                         </button>
                       </li>
 
                     </ul>
                   </nav>
 
-                  {/* {% include 'header/menu-buttons.twig' %} */}
 
                 </div>
               </nav>
@@ -163,9 +150,9 @@ function App() {
           {/* POST-HEADER */}
 
           {/* <section className="section section--post-header">
-            <div className="container">
-              <div>This is the post-header section</div>
-            </div>
+          <div className="container">
+          <div>This is the post-header section</div>
+          </div>
           </section> */}
 
         </header>
@@ -185,14 +172,20 @@ function App() {
 
             </div>
           </section>
-          <section className="section section--todo">
+          <section className="section section--warning v-padding">
+            <div className="container">
+              <div className="padding" style={{ backgroundColor: "#dc3545", borderRadius: "1rem" }}>
+                <h2>WARNING!</h2>
+                <h3>! Javacript libs not in use in this Styleguide !</h3>
+              </div>
+            </div>
+          </section>
+          <section className="section section--todo v-padding">
             <div className="container">
               <h2>Todos</h2>
-              <div style={{backgroundColor: "#dc3545", borderRadius: "1rem", padding: "1rem"}}>
-                <ul style={{margin: "0"}}>
+              <div className="padding-half" style={{ backgroundColor: "#dc3545", borderRadius: "1rem" }}>
+                <ul style={{ margin: "0" }}>
                   <li>favicons</li>
-                  <li>JS Tools</li>
-                  <li>xlinkHref SVGs</li>
                 </ul>
               </div>
             </div>
@@ -526,9 +519,9 @@ function App() {
                       <label htmlFor="area01">Select</label>
                       <div className="input">
                         <select name="" id="">
-                          <option value="">One</option>
-                          <option value="">Very very long two</option>
-                          <option value="">Three</option>
+                          <option /*value=""*/>One</option>
+                          <option /*value=""*/>Very very long two</option>
+                          <option /*value=""*/>Three</option>
                         </select>
                       </div>
                     </div>
@@ -536,7 +529,7 @@ function App() {
                       <div className="label">Checkbox</div>
                       <div className="input input--inline">
                         <div className="checkbox">
-                          <input type="checkbox" id="radio10" name="radio01x" checked="checked" />
+                          <input type="checkbox" id="radio10" name="radio01x" />
                           <label htmlFor="radio10"><span>Yes I do</span></label>
                         </div>
                       </div>
@@ -557,45 +550,37 @@ function App() {
                       <div className="input input--inline">
                         <input type="email" id="" placeholder="Ex: john.doe@gmail.com" />
                         <button className="input-after btn btn-secondary">
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-arrow-right"></use>
-                          </svg>
+                          <Svgs.IconArrowRight className="icon" />
                         </button>
                       </div>
                     </div>
                     {/* <div className="input-block input-block--inline">
-                      <label htmlFor="text01">Password</label>
-                      <div className="input">
-                        <input type="password" id="" placeholder="8 numbers" />
-                      </div>
+                    <label htmlFor="text01">Password</label>
+                    <div className="input">
+                    <input type="password" id="" placeholder="8 numbers" />
+                    </div>
                     </div> */}
                     <div className="input-block input-block--inline">
                       <div className="label">Checkbox</div>
                       <div className="input input--inline">
                         <div className="checkbox">
-                          <input type="checkbox" id="radio10" name="radio01x" checked="checked" />
+                          <input type="checkbox" id="radio10" name="radio01x" />
                           <label htmlFor="radio10"><span>Yes I do</span></label>
                         </div>
                       </div>
                     </div>
                     <button className="btn btn-default btn-round btn-bg-grow flex-push-right" type="reset">
-                      <svg className="icon" viewBox="0 0 24 24">
-                        <use xlinkHref="#icon-close"></use>
-                      </svg>
+                      <Svgs.IconClose className="icon" />
                       <span className="sr-only">Reset</span>
                     </button>
                     <button className="btn btn-default btn-round btn-bg-grow" type="reset">
-                      <svg className="icon" viewBox="0 0 24 24">
-                        <use xlinkHref="#icon-menu"></use>
-                      </svg>
+                      <Svgs.IconMenu className="icon" />
                       <span className="sr-only">Menu</span>
                     </button>
                     <button className="btn btn-accent btn-round" type="submit">
                       <span>Login</span>
                       &nbsp;
-                      <svg className="icon" viewBox="0 0 24 24">
-                        <use xlinkHref="#icon-arrow-right"></use>
-                      </svg>
+                      <Svgs.IconArrowRight className="icon" />
                     </button>
                   </div>
                 </div>
@@ -624,14 +609,14 @@ function App() {
                     <div className="input-block col-md-6">
                       <label htmlFor="number01">Number input</label>
                       <div className="input">
-                        <input type="number" id="number01" value="9" />
+                        <input type="number" id="number01" value="9" onChange={() => { }} />
                       </div>
                       <div className="input-text input-text--info">This is the input info text</div>
                     </div>
                     <div className="input-block col-md-6">
                       <label htmlFor="number02">Number input with unit</label>
                       <div className="input input--inline">
-                        <input type="number" id="number02" value="0" />
+                        <input type="number" id="number02" value="0" onChange={() => { }} />
                         <div className="input-after">€</div>
                       </div>
                     </div>
@@ -644,7 +629,7 @@ function App() {
                     <div className="input-block col-md-6 input-block--disabled">
                       <label htmlFor="number01">Disabled Number input</label>
                       <div className="input">
-                        <input type="number" id="number01" value="9" disabled />
+                        <input type="number" id="number01" value="9" onChange={() => { }} disabled />
                       </div>
                       <div className="input-text input-text--info">This is the input info text</div>
                     </div>
@@ -653,9 +638,9 @@ function App() {
                       <label htmlFor="area01">Select</label>
                       <div className="input">
                         <select name="" id="">
-                          <option value="">One</option>
-                          <option value="">Very very long two</option>
-                          <option value="">Three</option>
+                          <option /*value=""*/>One</option>
+                          <option /*value=""*/>Very very long two</option>
+                          <option /*value=""*/>Three</option>
                         </select>
                       </div>
                     </div>
@@ -672,7 +657,7 @@ function App() {
                       <div className="label">Radio</div>
                       <div className="input">
                         <div className="radio">
-                          <input type="radio" id="radio10" name="radio01x" checked="checked" />
+                          <input type="radio" id="radio10" name="radio01x" />
                           <label htmlFor="radio10">Yes I do</label>
                         </div>
                         <div className="radio">
@@ -685,7 +670,7 @@ function App() {
                       <div className="label">Checkbox</div>
                       <div className="input">
                         <div className="checkbox">
-                          <input type="checkbox" id="check010" checked="checked" />
+                          <input type="checkbox" id="check010" />
                           <label htmlFor="check010">Very very long checkbox label Lorem ipsum dolor sit amet
                             consectetur adipisicing elit.</label>
                         </div>
@@ -730,7 +715,7 @@ function App() {
                       </div>
                     </div>
 
-                    <div><input type="submit" value="input[type=submit]" /></div>
+                    <div><input type="submit" value="input[type=submit]" onChange={() => { }} /></div>
                     <div>
                       <button type="submit" className="btn-lg btn-round btn-hollow btn-black btn-caret">
                         <i className="fa fa-star"></i>
@@ -754,9 +739,7 @@ function App() {
                       <label htmlFor="text022">Inline text input with a very very long label</label>
                       <div className="input input--inline">
                         <div className="input-before">
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-percent"></use>
-                          </svg>
+                          <Svgs.IconPercent className="icon" />
                         </div>
                         <input type="text" id="text022" placeholder="Placeholder text" />
                       </div>
@@ -764,18 +747,16 @@ function App() {
                     <div className="input-block input-block--inline">
                       <label htmlFor="number01">Inline input</label>
                       <div className="input">
-                        <input type="number" id="number01" value="9" />
+                        <input type="number" id="number01" value="9" onChange={() => { }} />
                       </div>
                       <div className="input-text input-text--info">This is the very long input info text, spanning on multiple lines</div>
                     </div>
                     <div className="input-block input-block--inline">
                       <label htmlFor="number021">Inline input with unit</label>
                       <div className="input input--inline">
-                        <input type="number" id="number021" value="0" />
+                        <input type="number" id="number021" value="0" onChange={() => { }} />
                         <div className="input-after">
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-menu"></use>
-                          </svg>
+                          <Svgs.IconMenu className="icon" />
                           &nbsp;
                           <span>Foo</span>
                         </div>
@@ -787,9 +768,7 @@ function App() {
                         <button className="input-before btn btn-primary">
                           <span>Bar</span>
                           &nbsp;
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-dots"></use>
-                          </svg>
+                          <Svgs.IconDots className="icon" />
                         </button>
                         <input type="text" id="number022" placeholder="Some foo" />
                       </div>
@@ -798,14 +777,12 @@ function App() {
                       <label htmlFor="number02">Button after</label>
                       <div className="input input--inline">
                         <select name="" id="">
-                          <option value="">One</option>
-                          <option value="">Very very long two</option>
-                          <option value="">Three</option>
+                          <option /*value=""*/>One</option>
+                          <option /*value=""*/>Very very long two</option>
+                          <option /*value=""*/>Three</option>
                         </select>
                         <button className="input-after btn btn-secondary">
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-menu"></use>
-                          </svg>
+                          <Svgs.IconMenu className="icon" />
                         </button>
                       </div>
                     </div>
@@ -813,17 +790,13 @@ function App() {
                       <label htmlFor="number023">Before and after</label>
                       <div className="input input--inline">
                         <div className="input-before">
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-menu"></use>
-                          </svg>
+                          <Svgs.IconMenu className="icon" />
                         </div>
                         <input type="text" id="number023" placeholder="Some foo" />
                         <div className="input-after btn btn-accent">
                           <span>Baz</span>
                           &nbsp;
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-arrow-right"></use>
-                          </svg>
+                          <Svgs.IconArrowRight className="icon" />
                         </div>
                       </div>
                     </div>
@@ -837,7 +810,7 @@ function App() {
                     <div className="input-block input-block--inline input-block--disabled">
                       <label htmlFor="number01">Disabled inline input</label>
                       <div className="input">
-                        <input type="number" id="number01" value="9" disabled />
+                        <input type="number" id="number01" value="9" disabled onChange={() => { }} />
                       </div>
                       <div className="input-text input-text--info">This is the input info text</div>
                     </div>
@@ -845,17 +818,13 @@ function App() {
                       <label htmlFor="number02">Before and after</label>
                       <div className="input input--inline">
                         <div className="input-before">
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-menu"></use>
-                          </svg>
+                          <Svgs.IconMenu className="icon" />
                         </div>
                         <input type="text" id="number02" placeholder="Some foo" disabled />
                         <button className="input-after btn btn-accent" disabled>
                           <span>Baz</span>
                           &nbsp;
-                          <svg className="icon" viewBox="0 0 24 24">
-                            <use xlinkHref="#icon-arrow-right"></use>
-                          </svg>
+                          <Svgs.IconArrowRight className="icon" />
                         </button>
                       </div>
                     </div>
@@ -864,10 +833,10 @@ function App() {
                       <label htmlFor="area01">Inline multiple select</label>
                       <div className="input">
                         <select multiple>
-                          <option value="Choice 1">Choice 1</option>
-                          <option value="Choice 2">Choice 2</option>
-                          <option value="Choice 3">Choice 3</option>
-                          <option value="Choice 4">Choice 4</option>
+                          <option value="Choice 1" onChange={() => { }}>Choice 1</option>
+                          <option value="Choice 2" onChange={() => { }}>Choice 2</option>
+                          <option value="Choice 3" onChange={() => { }}>Choice 3</option>
+                          <option value="Choice 4" onChange={() => { }}>Choice 4</option>
                         </select>
                       </div>
                       <div className="input-text input-text--info">Hold CTRL key</div>
@@ -966,45 +935,31 @@ function App() {
 
               <div className="styleguide-icons styleguide-icons--icon-set">
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconArrowLeft className="icon" />
                   <span>arrow-left</span>
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon" />
                   <span>arrow-right</span>
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon" />
                   <span>close</span>
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon" />
                   <span>dots</span>
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon" />
                   <span>menu</span>
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon" />
                   <span>percent</span>
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-cart"></use>
-                  </svg>
+                  <Svgs.IconCart className="icon" />
                   <span>cart</span>
                 </div>
               </div>
@@ -1013,228 +968,156 @@ function App() {
 
               <h4>Size: extra-extra-large (32px)</h4>
 
-              <div className="styleguide-icons styleguide-icons--dark">
+              <div className="styleguide-icons styleguide-icons--light">
                 <div>
-                  <svg className="icon icon-xxl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconCart className="icon icon-xxl" />
                 </div>
                 <div>
-                  <svg className="icon icon-xxl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon icon-xxl" />
                 </div>
                 <div>
-                  <svg className="icon icon-xxl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon icon-xxl" />
                 </div>
                 <div>
-                  <svg className="icon icon-xxl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon icon-xxl" />
                 </div>
                 <div>
-                  <svg className="icon icon-xxl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon icon-xxl" />
                 </div>
                 <div>
-                  <svg className="icon icon-xxl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon icon-xxl" />
                 </div>
               </div>
 
               <h4>Size: extra-large (24px)</h4>
 
-              <div className="styleguide-icons styleguide-icons--dark">
+              <div className="styleguide-icons styleguide-icons--light">
                 <div>
-                  <svg className="icon icon-xl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconArrowLeft className="icon icon-xl" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon icon-xl" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon icon-xl" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon icon-xl" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon icon-xl" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xl" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon icon-xl" />;
                 </div>
               </div>
 
               <h4>Size: large (20px)</h4>
 
-              <div className="styleguide-icons styleguide-icons--dark">
+              <div className="styleguide-icons styleguide-icons--light">
                 <div>
-                  <svg className="icon icon-lg" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconArrowLeft className="icon icon-lg" />
                 </div>
                 <div>
-                  <svg className="icon icon-lg" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon icon-lg" />
                 </div>
                 <div>
-                  <svg className="icon icon-lg" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon icon-lg" />
                 </div>
                 <div>
-                  <svg className="icon icon-lg" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon icon-lg" />
                 </div>
                 <div>
-                  <svg className="icon icon-lg" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon icon-lg" />
                 </div>
                 <div>
-                  <svg className="icon icon-lg" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon icon-lg" />
                 </div>
               </div>
 
               <h4>Size: default (16px)</h4>
 
-              <div className="styleguide-icons styleguide-icons--dark">
+              <div className="styleguide-icons styleguide-icons--light">
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconArrowLeft className="icon" />
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon" />
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon" />
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon" />
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon" />
                 </div>
                 <div>
-                  <svg className="icon" viewBox="0 0 24 24" width="36" height="36">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon" />
                 </div>
                 <p>This one has HTML <code>width="36" height="36"</code> attributes override</p>
               </div>
 
               <h4>Size: small (14px)</h4>
 
-              <div className="styleguide-icons styleguide-icons--dark">
+              <div className="styleguide-icons styleguide-icons--light">
                 <div>
-                  <svg className="icon icon-sm" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconArrowLeft className="icon icon-sm" />;
                 </div>
                 <div>
-                  <svg className="icon icon-sm" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon icon-sm" />;
                 </div>
                 <div>
-                  <svg className="icon icon-sm" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon icon-sm" />;
                 </div>
                 <div>
-                  <svg className="icon icon-sm" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon icon-sm" />;
                 </div>
                 <div>
-                  <svg className="icon icon-sm" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon icon-sm" />;
                 </div>
                 <div>
-                  <svg className="icon icon-sm" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon icon-sm" />;
                 </div>
               </div>
 
               <h4>Size: extra-small (12px)</h4>
 
-              <div className="styleguide-icons styleguide-icons--dark">
+              <div className="styleguide-icons styleguide-icons--light">
                 <div>
-                  <svg className="icon icon-xs" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-left"></use>
-                  </svg>
+                  <Svgs.IconArrowLeft className="icon icon-xs" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xs" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-arrow-right"></use>
-                  </svg>
+                  <Svgs.IconArrowRight className="icon icon-xs" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xs" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-close"></use>
-                  </svg>
+                  <Svgs.IconClose className="icon icon-xs" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xs" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-dots"></use>
-                  </svg>
+                  <Svgs.IconDots className="icon icon-xs" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xs" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-menu"></use>
-                  </svg>
+                  <Svgs.IconMenu className="icon icon-xs" />;
                 </div>
                 <div>
-                  <svg className="icon icon-xs" viewBox="0 0 24 24">
-                    <use xlinkHref="#icon-percent"></use>
-                  </svg>
+                  <Svgs.IconPercent className="icon icon-xs" />;
                 </div>
               </div>
 
               <h3 className="styleguide-h3">Inline icons</h3>
 
-              <p className="font-size-biggest">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><svg className="icon icon--inline icon-xxl" viewBox="0 0 24 24"><use xlinkHref="#icon-menu"></use></svg>&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<svg className="icon icon--inline icon-xxl" viewBox="0 0 24 24"><use xlinkHref="#icon-percent"></use></svg></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
+              <p className="font-size-biggest">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><Svgs.IconMenu className="icon icon--inline icon-xxl" />&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<Svgs.IconPercent className="icon icon--inline icon-xxl" /></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
 
-              <p className="font-size-bigger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><svg className="icon icon--inline icon-xl" viewBox="0 0 24 24"><use xlinkHref="#icon-menu"></use></svg>&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<svg className="icon icon--inline icon-xl" viewBox="0 0 24 24"><use xlinkHref="#icon-percent"></use></svg></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
+              <p className="font-size-bigger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><Svgs.IconMenu className="icon icon--inline icon-xl" />&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<Svgs.IconPercent className="icon icon--inline icon-xl" /></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
 
-              <p className="font-size-big">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><svg className="icon icon--inline icon-lg" viewBox="0 0 24 24"><use xlinkHref="#icon-menu"></use></svg>&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<svg className="icon icon--inline icon-lg" viewBox="0 0 24 24"><use xlinkHref="#icon-percent"></use></svg></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
+              <p className="font-size-big">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><Svgs.IconMenu className="icon icon--inline icon-lg" />&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<Svgs.IconPercent className="icon icon--inline icon-lg" /></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><svg className="icon icon--inline" viewBox="0 0 24 24"><use xlinkHref="#icon-menu"></use></svg>&nbsp;ICONIC</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<svg className="icon icon--inline" viewBox="0 0 24 24"><use xlinkHref="#icon-percent"></use></svg></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><Svgs.IconMenu className="icon icon--inline" />&nbsp;ICONIC</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<Svgs.IconPercent className="icon icon--inline" /></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
 
-              <p className="font-size-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><svg className="icon icon--inline icon-sm" viewBox="0 0 24 24"><use xlinkHref="#icon-menu"></use></svg>&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<svg className="icon icon--inline icon-sm" viewBox="0 0 24 24"><use xlinkHref="#icon-percent"></use></svg></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
+              <p className="font-size-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><Svgs.IconMenu className="icon icon--inline icon-sm" />&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<Svgs.IconPercent className="icon icon--inline icon-sm" /></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
 
-              <p className="font-size-smaller">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><svg className="icon icon--inline icon-xs" viewBox="0 0 24 24"><use xlinkHref="#icon-menu"></use></svg>&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<svg className="icon icon--inline icon-xs" viewBox="0 0 24 24"><use xlinkHref="#icon-percent"></use></svg></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
+              <p className="font-size-smaller">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus pariatur incidunt labore est obcaecati dolores, temporibus <a href="window.location.href"><Svgs.IconMenu className="icon icon--inline icon-xs" />&nbsp;An inline icon</a> inventore magni reiciendis voluptatum <a href="window.location.href">Another inline icon&nbsp;<Svgs.IconPercent className="icon icon--inline icon-xs" /></a> et nisi dicta ex autem! Accusamus ducimus iusto nobis.</p>
 
             </div>
           </section>
@@ -1333,58 +1216,40 @@ function App() {
                   <h3 className="styleguide-h3">Background grow</h3>
                   <button className="btn btn-bg-grow">.bg-grow</button>
                   <button className="btn btn-bg-grow">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <button className="btn btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon" />
                   </button>
                   <button className="btn btn-default btn-bg-grow btn-round">.bg-grow default</button>
                   <button className="btn btn-default btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon" />
                   </button>
                   {/* <div style="background: black; padding: 0.75rem; margin-bottom: 1.5rem;">
-                  </div> */}
+</div> */}
                   <button className="btn btn-black btn-bg-grow">.bg-grow black</button>
                   <button className="btn btn-black btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <button className="btn btn-gray btn-bg-grow">.bg-grow gray</button>
                   <button className="btn btn-gray btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <button className="btn btn-white btn-bg-grow">.bg-grow white</button>
                   <button className="btn btn-white btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <button className="btn btn-primary btn-bg-grow">.bg-grow primary</button>
                   <button className="btn btn-primary btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <button className="btn btn-secondary btn-bg-grow btn-round">.bg-grow secondary</button>
                   <button className="btn btn-secondary btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <button className="btn btn-accent btn-bg-grow">.bg-grow accent</button>
                   <button className="btn btn-accent btn-bg-grow btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
 
                   <h3 className="styleguide-h3">Disabled</h3>
@@ -1402,140 +1267,103 @@ function App() {
                   <button className="btn btn-accent" disabled="disabled">disabled</button>
                 </div>
                 {/* <div className="col-xs-6 col-sm-4 col-md-3">
-                </div> */}
+</div> */}
                 <div className="col-xs-12 col-md-6">
                   <h3 className="styleguide-h3">Icons</h3>
                   <button className="btn">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon" />
                     &nbsp;
                     MENU</button>
                   <button className="btn btn-default">
                     .btn-default
                     &nbsp;
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-percent"></use>
-                    </svg>
+                    <Svgs.IconPercent className="icon" />
                   </button>
                   <button className="btn btn-black btn-block btn-round">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-dots"></use>
-                    </svg>
+                    <Svgs.IconDots className="icon" />
                     &nbsp;
                     .btn-black
                   </button>
                   <button className="btn btn-secondary btn-sm btn-wrap">
                     .btn-wrap very very long button multi-line content
                     &nbsp;
-                    <svg className="icon icon-xl" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon icon-xxl" />
                   </button>
                   <button className="btn btn-gray btn-lg">
                     .btn-gray
                     &nbsp;
-                    <svg className="icon icon-lg" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconPercent className="icon icon-lg" />
                   </button>
                   <button className="btn btn-primary btn-xs">
-                    <svg className="icon icon-xs" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-percent"></use>
-                    </svg>
+                    <Svgs.IconPercent className="icon icon-xs" />
                   </button>
                   <button className="btn btn-white">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-arrow-left"></use>
-                    </svg>&nbsp;
+                    <Svgs.IconArrowLeft className="icon" />&nbsp;
                     .btn-white
                   </button>
                   <button className="btn btn-primary btn-round btn-hollow">
                     .btn-primary
                     &nbsp;
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-arrow-right"></use>
-                    </svg>
+                    <Svgs.IconArrowRight className="icon" />
                   </button>
                   <br />
                   <button className="btn btn-secondary btn-xs">
                     .btn-xs&nbsp;
-                    <svg className="icon icon-xs" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-arrow-right"></use>
-                    </svg>
+                    <Svgs.IconArrowRight className="icon icon-xs" />
                   </button>
                   <button className="btn btn-accent btn-xs">
-                    <svg className="icon icon-xs" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-arrow-left"></use>
-                    </svg>
+                    <Svgs.IconArrowLeft className="icon icon-xs" />
                   </button>
                   <br />
                   <button className="btn btn-secondary btn-sm btn-round">
                     .btn-sm&nbsp;
-                    <svg className="icon icon-sm" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon icon-sm" />&nbsp;
                   </button>
                   <button className="btn btn-accent btn-sm btn-round">
-                    <svg className="icon icon-sm" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-percent"></use>
-                    </svg>
+                    <Svgs.IconPercent className="icon icon-sm" />&nbsp;
                   </button>
                   <br />
                   <button className="btn btn-secondary">
                     .btn&nbsp;
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon" />
                   </button>
                   <button className="btn btn-accent">
-                    <svg className="icon" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-close"></use>
-                    </svg>
+                    <Svgs.IconClose className="icon" />
                   </button>
                   <br />
                   <button className="btn btn-secondary btn-lg btn-hollow">
                     .btn-lg&nbsp;
-                    <svg className="icon icon-lg" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon icon-lg" />
                   </button>
                   <button className="btn btn-accent btn-lg btn-hollow">
-                    <svg className="icon icon-lg" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-dots"></use>
-                    </svg>
+                    <Svgs.IconDots className="icon icon-lg" />
                   </button>
                   <br />
                   <button className="btn btn-secondary btn-xl">
                     .btn-xl&nbsp;
-                    <svg className="icon icon-xl" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-menu"></use>
-                    </svg>
+                    <Svgs.IconMenu className="icon icon-xl" />;
                   </button>
                   <button className="btn btn-accent btn-xl">
-                    <svg className="icon icon-xl" viewBox="0 0 24 24">
-                      <use xlinkHref="#icon-dots"></use>
-                    </svg>
+                    <Svgs.IconDots className="icon icon-xl" />;
                   </button>
                 </div>
                 {/* <div className="col-xs-6 col-sm-4 col-md-3">
-                  <h3 className="styleguide-h3">Caret</h3>
-                  <button className="btn btn-default btn-caret">.btn-caret</button>
-                  <button className="btn btn-primary btn-caret btn-xs">.btn-caret</button>
-                  <button className="btn btn-black btn-caret btn-round btn-xl">
-                    .btn-caret
-                  </button>
-                  <div style="background: black; padding: 0.75rem; margin-bottom: 1.5rem;">
-                    <button className="btn btn-white btn-caret btn-hollow btn-block">
-                      .btn-caret
-                    </button>
-                  </div>
-                  <button className="btn btn-secondary btn-caret btn-wrap">
-                    .btn-caret very very long button multi-line content
-                  </button>
+                <h3 className="styleguide-h3">Caret</h3>
+                <button className="btn btn-default btn-caret">.btn-caret</button>
+                <button className="btn btn-primary btn-caret btn-xs">.btn-caret</button>
+                <button className="btn btn-black btn-caret btn-round btn-xl">
+                .btn-caret
+                </button>
+                <div style="background: black; padding: 0.75rem; margin-bottom: 1.5rem;">
+                <button className="btn btn-white btn-caret btn-hollow btn-block">
+                .btn-caret
+                </button>
+                </div>
+                <button className="btn btn-secondary btn-caret btn-wrap">
+                .btn-caret very very long button multi-line content
+                </button>
                 </div> */}
               </div>
-
             </div>
           </section>
 
@@ -1767,10 +1595,10 @@ function App() {
 
               <h2>Image test</h2>
               <div className="styleguide-image-test">
-                <img src="dist/img/static/logo-diatem.jpg" alt="Logo Diatem Test" />
+                <img src="/img/static/logo-diatem.jpg" alt="Logo Diatem Test" />
               </div>
               <div className="styleguide-image-test">
-                <img src="dist/img/static/logo-diatem-flipped.png" alt="Diatem Flipped" />
+                <img src="/img/static/logo-diatem-flipped.png" alt="Diatem Flipped" />
               </div>
 
               <h2>Background image test</h2>
@@ -1790,17 +1618,17 @@ function App() {
           {/* PRE-FOOTER */}
 
           {/* <section className="section section--pre-footer">
-            <div className="container">
-              <div>This is the pre-footer section</div>
-            </div>
+          <div className="container">
+          <div>This is the pre-footer section</div>
+          </div>
           </section> */}
 
           {/* FOOTER */}
 
           {/* <section className="section section--footer">
-            <div className="container">
-              <div>This is the footer section</div>
-            </div>
+          <div className="container">
+          <div>This is the footer section</div>
+          </div>
           </section> */}
 
           {/* POST-FOOTER */}
@@ -1810,9 +1638,7 @@ function App() {
               <div className="footer-made-by">
                 <em>Made with ♥ by&nbsp;</em>
                 <a href="https://diatem.net" rel="noreferrer" target="_blank" className="footer-made-by__link" >
-                  <svg viewBox="0 0 200 56" width="75" height="21">
-                    <use xlinkHref="#logo-diatem--no-baseline--no-color"></use>
-                  </svg>
+                  <Svgs.LogoDiatemNoBaselineNoColor />
                 </a>
               </div>
             </div>
@@ -1831,9 +1657,7 @@ function App() {
         <div className="modal__header">
           <div className="modal__title h3" id="modal_1-title">Small Modal title</div>
           <button className="modal__btn-close" data-modal="close">
-            <svg className="icon icon-lg" viewBox="0 0 24 24">
-              <use xlinkHref="#icon-close"></use>
-            </svg>
+            <Svgs.IconClose className="icon icon-lg" />
             <span className="sr-only">Close</span>
           </button>
         </div>
@@ -1851,9 +1675,7 @@ function App() {
         <div className="modal__header">
           <div className="modal__title h3" id="modal_2-title">Default modal title</div>
           <button className="modal__btn-close" data-modal="close">
-            <svg className="icon icon-lg" viewBox="0 0 24 24">
-              <use xlinkHref="#icon-close"></use>
-            </svg>
+            <Svgs.IconClose className="icon icon-lg" />
             <span className="sr-only">Close</span>
           </button>
         </div>
@@ -1888,9 +1710,7 @@ function App() {
         <div className="modal__header">
           <div className="modal__title h3" id="modal_3-title">Large modal title</div>
           <button className="modal__btn-close btn btn-round btn-bg-grow" data-modal="close">
-            <svg className="icon icon-lg" viewBox="0 0 24 24">
-              <use xlinkHref="#icon-close"></use>
-            </svg>
+            <Svgs.IconClose className="icon icon-lg" />
             <span className="sr-only">Close</span>
           </button>
         </div>
@@ -1925,11 +1745,11 @@ function App() {
 
       {/* INLINE SVG SPRITES ! REMOVED */}
 
-      <script async src="dist/js/main.js"></script>
+      {/* <script async src="./js/lib/tabs.js"></script> */}
 
       {/* <script id="__bs_script__">
-        //<![CDATA[
-        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));//]]>
+      //<![CDATA[
+      document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));//]]>
       </script> */}
     </div>
   );
