@@ -14,3 +14,10 @@ export { default as LogoDiatem } from "./LogoDiatem";
 export { default as LogoLightwords } from "./LogoLightwords";
 export { default as LogoMobile } from "./LogoMobile";
 export { default as LogoTablet } from "./LogoTablet";
+
+
+export { default as IconArrowDownStroke } from "./stroke/IconArrowDownStroke";
+export { default as IconArrowLeftStroke } from "./stroke/IconArrowLeftStroke";
+export { default as IconArrowRightStroke } from "./stroke/IconArrowRightStroke";
+export { default as IconCloseStroke } from "./stroke/IconCloseStroke";
+export { default as IconPercentAltStroke } from "./stroke/IconPercentAltStroke";
