@@ -1,5 +1,5 @@
 # react-frontkit
-This repo is a project starter implementing some great tools. Inspired from DFS by Chmood 
+This repo is a starter project implementing some great tools. Inspired from DFS by Chmood 
 
 
 ## Process
@@ -12,7 +12,7 @@ This repo is a project starter implementing some great tools. Inspired from DFS 
 - npm i focus-trap
 - npm i tiny-slider
 - npm i jquery
-
+- 
 #### SVG conversion 
 - npm install --save-dev @svgr/cli
 
