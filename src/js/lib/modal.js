@@ -16,7 +16,7 @@ const modal = (() => {
         $site = document.querySelector('.site-wrapper'),
         $modalToggles = document.querySelectorAll('[data-toggle="modal"]'),
         $modals = document.querySelectorAll('.modal'),
-        // $overlay = document.getElementById('overlay'),
+        $overlay = document.getElementById('overlay'),
         $body = document.body
 
     let 
@@ -96,9 +96,11 @@ const modal = (() => {
 
     // Closing all modals when overlay is clicked
 
-    // $overlay.addEventListener('click', () => {
-    //     $modals.forEach($modal => closeModal($modal))
-    // })
+    if($overlay) {
+        $overlay.addEventListener('click', () => {
+            $modals.forEach($modal => closeModal($modal))
+        })
+    }
 
     // Closing all modals when escape key is pressed
 

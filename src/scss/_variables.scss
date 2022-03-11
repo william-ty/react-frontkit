@@ -4,7 +4,7 @@
  ******************************************************************************/
 
 // Global class generating
-$generate-classes: true;
+$generate_classes: true;
 
 ////////////////////////////////////////////////////////////////////////////////
 // LAYOUT
@@ -330,7 +330,7 @@ $generate-modals-classes: true !default;
 
 // SHADOWS
 
-$generate-shadow-classes: false;
+$generate-shadow-classes: true;
 
 // CAPPED WIDTH
 

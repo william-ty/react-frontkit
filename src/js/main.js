@@ -7,28 +7,45 @@
 
 // Webpack main entry file
 
-import assets from "./assets"
+import "./assets"
 
 // LIB
 
-import toggle from "./lib/toggle"
-import modal from "./lib/modal"
-import tabs from "./lib/tabs"
-import ripple from "./lib/ripple"
-import scroller from "./lib/scroller"
-import keyboard from "./lib/keyboard"
-// import select2 from "./lib/select2"
+import "./lib/toggle"
+import "./lib/modal"
+import "./lib/tabs"
+import "./lib/ripple"
+import "./lib/scroller"
+import "./lib/keyboard"
+// import "./lib/select2"
 
-// import slider from "./lib/slider"
+import "./lib/slider"
 
 // [TODO] Port Skeleton and Lightwords libs here
 
-import debug from "./lib/debug"
+import "./lib/debug"
 
 // Example lib
-// import foo from "./lib/foo"
+// import "./lib/foo"
 
 // APP
-import app from "./app/app"
+import "./app/app"
 
 console.log("main.js has finished loading 😁")
+
+
+// import "./js/lib/assets"
+
+// // LIB
+// import "./js/lib/toggle"
+// import "./js/lib/modal"
+// import "./js/lib/ripple"
+// import "./js/lib/scroller"
+// import "./js/lib/keyboard"
+// // import "./js/lib/select2"
+// import "./js/lib/slider"
+// import "./js/lib/debug"
+// // APP
+// import "./js/app/app"
+
+// import "./js/lib/tabs"

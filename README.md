@@ -3,7 +3,6 @@ This repo is a starter project implementing some great tools. Inspired from DFS 
 
 
 ## Process
-
 - npm i sass --save
 - npm i normalize.css
 
@@ -13,14 +12,17 @@ This repo is a starter project implementing some great tools. Inspired from DFS 
 - npm i focus-trap
 - npm i tiny-slider
 - npm i jquery
+- 
+#### SVG conversion 
+- npm install --save-dev @svgr/cli
 
 ### Process related doc :
-https://create-react-app.dev/docs/adding-a-sass-stylesheet/
+- https://create-react-app.dev/docs/adding-a-sass-stylesheet/
+- https://react-svgr.com/docs/cli/
 
 ## TODOS : 
 - favicons
 - js tools
-- xlinHref SVG
 
 ------------------------------------------
 # Getting Started with Create React App

@@ -9,7 +9,7 @@ const keyboard = (() => {
 
         // Close panels, mobile menu and search overlay when escape key is pressed
         if (keyName === 'Escape') {
-            $body.classList.remove('has-panel has-panel-menu has-overlay has-search-overlay')
+            $body.classList.remove('has-panel', 'has-panel-menu', 'has-overlay', 'has-search-overlay')
             return;
         }
 
