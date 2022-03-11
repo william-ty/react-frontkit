@@ -3,9 +3,9 @@ This repo is a project starter implementing some great tools. Inspired from DFS 
 
 
 ## Process
-
 - npm i sass --save
 - npm i normalize.css
+
 ### Libs :
 
 #### JS 
@@ -23,7 +23,6 @@ This repo is a project starter implementing some great tools. Inspired from DFS 
 ## TODOS : 
 - favicons
 - js tools
-- xlinHref SVG
 
 ------------------------------------------
 # Getting Started with Create React App

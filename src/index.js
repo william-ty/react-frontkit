@@ -2,6 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import {
+//   assets,
+//   toggle,
+//   modal,
+//   tabs,
+//   ripple,
+//   scroller,
+//   keyboard,
+//   slider,
+//   debug,
+//   app
+// } from './js/main'
+import "./js/lib/tabs"
 
 ReactDOM.render(
   <React.StrictMode>
