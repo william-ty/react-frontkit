@@ -1,6 +1,6 @@
-# react-frontkit
+# react-frontkit (WIP)
 This repo is a starter project implementing some great tools. Inspired from DFS by Chmood 
-
+ - Needs converting from statick html to components for JS implementations. Only SCSS is relatable at the moment
 
 ## Process
 - npm i sass --save
